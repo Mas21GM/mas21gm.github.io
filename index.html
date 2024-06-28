@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Through the Lens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e003e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3d005b;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 5px solid #4b0078;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #3d005b;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .upload-form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .upload-form input[type="file"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Through the Lens</h1>
+    </header>
+    <div class="container">
+        <div class="upload-form">
+            <h2>Upload Your Photo</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="photo" accept="image/*">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        <div class="gallery">
+            <!-- Photos will be displayed here -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Through the Lens</p>
+    </footer>
+</body>
+</html>
